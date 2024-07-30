@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/toolfit/static/css/main.9b7e4726.css",
+    "main.js": "/toolfit/static/js/main.2f36fa32.js",
+    "index.html": "/toolfit/index.html",
+    "main.9b7e4726.css.map": "/toolfit/static/css/main.9b7e4726.css.map",
+    "main.2f36fa32.js.map": "/toolfit/static/js/main.2f36fa32.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b7e4726.css",
+    "static/js/main.2f36fa32.js"
+  ]
+}
