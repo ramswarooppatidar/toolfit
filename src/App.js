@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
+import styles from "./styles/btn.module.css"
+import { useState } from "react";
+import { Toolfit } from "./components/Tooltip";
 function App() {
+  const [isHover, setIsHover] = useState(false);
+  const [tooltipPosition, setTooltipPosition] = useState('top'); // Default position
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <div className={styles.container}>
+        
+      <div className={styles.selector}>
+        <label>Select Tooltip Position: </label>
+        <select onChange={(e) => setTooltipPosition(e.target.value)}>
+          <option value="top">Top</option>
+          <option value="bottom">Bottom</option>
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+        </select>
+      </div>
+
+
+        <button
+          onMouseEnter={() => setIsHover(true)}
+          onMouseLeave={() => setIsHover(false)}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Hover on me!
+        </button>
+        {isHover && <Toolfit position={tooltipPosition} />}
+
+      </div>
+      
+    </>
   );
 }
 
